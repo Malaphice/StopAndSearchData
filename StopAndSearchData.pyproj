@@ -28,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="dockerfile">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="StopAndSearchData\data_fetch.py">
       <SubType>Code</SubType>
@@ -35,11 +38,21 @@
     <Compile Include="StopAndSearchData\scheduler.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="tests\test_API_fetching.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_data_processing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_file_operation.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="StopAndSearchData\__init__.py" />
     <Compile Include="StopAndSearchData\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="StopAndSearchData\" />
+    <Folder Include="tests\" />
     <Folder Include="StopAndSearchData\static\" />
     <Folder Include="StopAndSearchData\static\content\" />
     <Folder Include="StopAndSearchData\static\fonts\" />

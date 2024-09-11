@@ -10,7 +10,16 @@ def get_stop_and_search_data(force, date):
     return []
 
 def create_dataframe(data):
-    return pd.json_normalize(data)
+    """Convert JSON data to a DataFrame, removing 'location' but keeping its nested fields."""
+    
+    # Normalize the JSON data into a flat table
+    df = pd.json_normalize(data)
+
+    # Drop the 'location' column but keep its nested fields
+    if 'location' in df.columns:
+        df = df.drop(columns=['location'])
+
+    return df
 
 def update_data(force="metropolitan", year="2023", month="01"):
     """Fetches stop and search data for the given force, year, and month."""
