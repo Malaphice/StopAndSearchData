@@ -84,10 +84,7 @@
     <Content Include="StopAndSearchData\static\scripts\respond.js" />
     <Content Include="StopAndSearchData\static\scripts\respond.min.js" />
     <Content Include="StopAndSearchData\static\scripts\_references.js" />
-    <Content Include="StopAndSearchData\templates\about.html" />
-    <Content Include="StopAndSearchData\templates\contact.html" />
     <Content Include="StopAndSearchData\templates\index.html" />
-    <Content Include="StopAndSearchData\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
